@@ -1,17 +1,11 @@
-
-
 const qrcode = document.getElementById('qrcode');
 new QRCode("qrcode", {
     text: "",
-    width: 200,
-    height: 200,
+    width: 400,
+    height: 400,
     colorDark: "#000000",
     colorLight: "#ffffff",
-    // correctLevel: QRCode.CorrectLevel.H,
-    logo: "./img/meta.png",
-    logoSize: 50,
-    logoBackgroundColor: '#ffffff',
-    logoMargin: 4
+    correctLevel: QRCode.CorrectLevel.H,
 });
 
   
@@ -30,15 +24,36 @@ new QRCode("qrcode", {
   } )
   
 
-  function downloadQR() {
-    const qrcodeElement = document.getElementById("qrcode");
-    const qrcodeImage = qrcodeElement.querySelector("canvas").toDataURL();
+  // function downloadQR() {
+  //   const qrcodeElement = document.getElementById("qrcode");
+  //   const qrcodeImage = qrcodeElement.querySelector("canvas").toDataURL();
+
+  //   const link = document.createElement("a");
+  //   link.download = "qrcode.jpg";
+  //   link.href = qrcodeImage;
+  //   link.click();
+  // }
+
+
+
+function downloadQR() {
+  const qrcodeElement = document.getElementById("qrcode");
+  const qrcodeCanvas = qrcodeElement.querySelector("canvas");
+
+  const canvas = document.createElement("canvas");
+  canvas.width = 600;
+  canvas.height = 600;
+  const ctx = canvas.getContext("2d");
+
+  ctx.drawImage(qrcodeCanvas, 0, 0, 600, 600);
   
-    const link = document.createElement("a");
-    link.download = "qrcode.png";
-    link.href = qrcodeImage;
-    link.click();
-  }
+  const qrcodeImage = canvas.toDataURL();
+
+  const link = document.createElement("a");
+  link.download = "qrcode.jpeg";
+  link.href = qrcodeImage;
+  link.click();
+}
 
 
 
