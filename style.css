@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+#qrcode{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+header{
+    background-color: #000;
+    color: #fff;
+}
+
+h1{
+    text-align: center;
+}
+
+#input{
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+#convert{
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(36, 191, 59);
+    cursor: pointer;
+}
+
+#convert:hover{
+    background-color: rgba(36, 191, 59, 0.669);
+}
+
+#clear{
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(231, 48, 48);
+    cursor: pointer;
+}
+
+#clear:hover{
+    background-color: rgba(231, 48, 48, 0.733);
+}
+
+
+#downloadButton{
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(235, 107, 235);
+}
+
+#downLoadButton{
+    background-color: rgba(235, 107, 235, 0.632);
+}
