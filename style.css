@@ -38,27 +38,28 @@ h1{
 #input{
     margin: 10px;
     padding: 10px;
-    width: 100%;
+    width: 300px;
 }
 
 #convert{
-    width: 40%;
+    width: 300px;
     margin: 10px;
     padding: 10px;
-    border-radius: 5px;
-    background-color: rgb(36, 191, 59);
+    background-color: #000;
+    font-weight: bold;
+    color: #fff;
     cursor: pointer;
 }
 
 #convert:hover{
-    background-color: rgba(36, 191, 59, 0.669);
+    background-color: #000000b7;
 }
 
 #clear{
-    width: 40%;
+    width: 300px;
     margin: 10px;
     padding: 10px;
-    border-radius: 5px;
+    color: #fff;
     background-color: rgb(231, 48, 48);
     cursor: pointer;
 }
@@ -69,14 +70,14 @@ h1{
 
 
 #downloadButton{
-    width: 40%;
+    width: 300px;
     margin: 10px;
     padding: 10px;
-    border-radius: 5px;
+    color: #fff;
     cursor: pointer;
-    background-color: rgb(235, 107, 235);
+    background-color: rgb(42, 42, 229);
 }
 
-#downLoadButton{
-    background-color: rgba(235, 107, 235, 0.632);
+#downloadButton:hover{
+    background-color: rgba(42, 42, 229, 0.701);
 }
