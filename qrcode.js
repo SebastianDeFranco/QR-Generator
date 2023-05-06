@@ -8,6 +8,11 @@ new QRCode("qrcode", {
     correctLevel: QRCode.CorrectLevel.H,
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  while (qrcode.firstChild) {
+    qrcode.removeChild(qrcode.firstChild);
+  }
+});
   
   document.getElementById("convert").addEventListener("click", function() {
     const inputValue = document.getElementById("input").value;
@@ -23,18 +28,6 @@ new QRCode("qrcode", {
 
   } )
   
-
-  // function downloadQR() {
-  //   const qrcodeElement = document.getElementById("qrcode");
-  //   const qrcodeImage = qrcodeElement.querySelector("canvas").toDataURL();
-
-  //   const link = document.createElement("a");
-  //   link.download = "qrcode.jpg";
-  //   link.href = qrcodeImage;
-  //   link.click();
-  // }
-
-
 
 function downloadQR() {
   const qrcodeElement = document.getElementById("qrcode");
