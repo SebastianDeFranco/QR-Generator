@@ -1,4 +1,5 @@
 const qrcode = document.getElementById('qrcode');
+
 new QRCode("qrcode", {
     text: "",
     width: 400,
@@ -13,21 +14,17 @@ document.addEventListener('DOMContentLoaded', function() {
     qrcode.removeChild(qrcode.firstChild);
   }
 });
-  
-  document.getElementById("convert").addEventListener("click", function() {
+
+document.getElementById("convert").addEventListener("click", function() {
     const inputValue = document.getElementById("input").value;
-    // qrcode.makeCode(inputValue);
     new QRCode(qrcode, inputValue)
-  });
+});
 
-  document.getElementById("clear").addEventListener("click",function () {
-    const qrcodeElement = document.getElementById("qrcode");
-    while (qrcodeElement.firstChild) {
-    qrcodeElement.removeChild(qrcodeElement.firstChild);
+document.getElementById("clear").addEventListener("click", function () {
+    while (qrcode.firstChild) {
+        qrcode.removeChild(qrcode.firstChild);
     }
-
-  } )
-  
+});
 
 function downloadQR() {
   const qrcodeElement = document.getElementById("qrcode");
@@ -47,6 +44,7 @@ function downloadQR() {
   link.href = qrcodeImage;
   link.click();
 }
+
 
 
 
